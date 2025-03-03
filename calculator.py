@@ -93,6 +93,23 @@ def percentage(value1, value2):
     result = (value2/100)*value1
     print(result)
     
+def sqrt(value1):
+    """
+    Tar inn en verdi og finner kvadratroten av denne.
+
+    Funksjonen tar inn en parameter, 'value1'.
+
+    Args: 
+        value1(int): Verdi 1
+
+    Returns: 
+        str: En string som inneholder en float med resultatet av
+        utregningen.
+    """
+    import math
+    print(math.sqrt(value1))
+
+
 def run_calc():
     """
     Denne funksjonen kjører programmet. 
@@ -105,9 +122,13 @@ def run_calc():
     """
     function = input("What function would you like to use? ")
     value1 = int(input("Input the first number "))
-    value2 = int(input("Input the second number "))
+    if function != "sqrt":
+        value2 = int(input("Input the second number "))
     if function == "addition":
         addition(value1, value2)
+
+    elif function == "sqrt":
+        sqrt(value1)
 
     elif function == "substraction":
         substraction(value1, value2)
