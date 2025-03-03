@@ -71,6 +71,27 @@ def multiplication(value1, value2):
     """
     result = value1 * value2
     print(result)
+
+def percentage(value1, value2):
+    """
+    Tar inn to verdier, hvor den første verdien er prosentandelen
+    e.g. 10 vil tilsvare 10%. Den andre verdien er tallet du vil 
+    finne den mengden prosent av.
+    Eksempel: value1 = 10, value2 = 30.
+    Dette vil da tilsvare 10% av 30 altså 3.
+
+    Funksjonen tar inn to parametere, 'value1' og 'value2'.
+
+    Args: 
+        value1(int): Verdi 1
+        value2(int): Verdi 2
+
+    Returns: 
+        str: En string som inneholder en float med resultatet av
+        utregningen.
+    """
+    result = (value2/100)*value1
+    print(result)
     
 def run_calc():
     """
@@ -96,6 +117,9 @@ def run_calc():
 
     elif function == "multiplication":
         multiplication(value1, value2)
+
+    elif function == "percentage":
+        percentage(value1, value2)
 
     else:
         print("Unknown function")
